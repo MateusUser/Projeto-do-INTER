@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar com Pesquisa</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="navbar show-menu">
+        <div class="header-inner-content">
+            <a href="pagina-inicial.html" class="logo"><h1>Hibernum</h1></a>
+            <nav>
+                <ul class="menu">
+                    <li>Novidades</li>
+                    <li>Roupas</li>
+                    <li>Bazar</li>
+                    <li>Marcas</li>
+                </ul>
+            </nav>
+            <div class="nav-icon-container">
+                <img src="img/carrinho-carrinho.png" id="carrinho-icon" onclick="abrirModalCarrinho()"/>
+                <a href="Cadastro.html"><img src="img/login-de-usuario.png" /></a>
+            </div>
+        </div>
+    </div>
+    <header>
+        <section class="carrossel">
+            <div class="carrossel-inner">
+                <input class="carrossel-open" type="radio" id="carrossel-1" name="carrossel" checked="checked" hidden="" aria-hidden="true">
+                <div class="carrossel-item">
+                    <a href="pagina1.html"><img src="img/Fotos1 (1).webp"></a>
+                </div>
+                <input class="carrossel-open" type="radio" id="carrossel-2" name="carrossel" hidden="" aria-hidden="true">
+                <div class="carrossel-item">
+                    <a href="pagina2.html"><img src="img/Fotos1 (2).webp"></a>
+                </div>
+                <input class="carrossel-open" type="radio" id="carrossel-3" name="carrossel" hidden="" aria-hidden="true">
+                <div class="carrossel-item">
+                    <a href="pagina3.html"><img src="img/Fotos1 (3).webp"></a>
+                </div>
+                <input class="carrossel-open" type="radio" id="carrossel-4" name="carrossel" hidden="" aria-hidden="true">
+                <div class="carrossel-item">
+                    <a href="pagina4.html"><img src="img/Fotos1 (4).webp"></a>
+                </div>
+                <label for="carrossel-3" class="carrossel-control prev control-1">‹</label>
+                <label for="carrossel-2" class="carrossel-control next control-1">›</label>
+                <label for="carrossel-1" class="carrossel-control prev control-2">‹</label>
+                <label for="carrossel-3" class="carrossel-control next control-2">›</label>
+                <label for="carrossel-2" class="carrossel-control prev control-3">‹</label>
+                <label for="carrossel-4" class="carrossel-control next control-3">›</label>
+                <label for="carrossel-3" class="carrossel-control prev control-4">‹</label>
+                <label for="carrossel-1" class="carrossel-control next control-4">›</label>
+                
+                <ol class="carrossel-indicators">
+                    <li>
+                        <label for="carrossel-1" class="carrossel-bullet">•</label>
+                    </li>
+                    <li>
+                        <label for="carrossel-2" class="carrossel-bullet">•</label>
+                    </li>
+                    <li>
+                        <label for="carrossel-3" class="carrossel-bullet">•</label>
+                    </li>
+                    <li>
+                        <label for="carrossel-4" class="carrossel-bullet">•</label>
+                    </li>
+                </ol>
+            </div>
+        </section>
+    </header>
+    <br>
+    <div class="image-container8">
+        <a href="pagina1.html">
+            <img src="img/Cakçados.webp" alt="Imagem 1">
+        </a>
+        <a href="pagina2.html">
+            <img src="img/jaqueta.webp" alt="Imagem 2">
+        </a>
+        <a href="pagina3.html">
+            <img src="img/malha termica.webp" alt="Imagem 3">
+        </a>
+        <a href="pagina4.html">
+            <img src="img/acessorios.webp" alt="Imagem 4">
+        </a>
+    </div>
+    <br>
+    <div class="destaques">
+        <h2 style="text-align: center;">Nossos Destaques</h2>
+        <ul>
+            <li>Lançamentos</li>
+            <li>Mais Vendidos</li>
+            <li>Ofertas</li>
+        </ul>
+    </div>
+    <br>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="img/Moncler.webp" alt="Produto 1">
+                <h3>Casaco Vidal Matelassê Bicolor</h3>
+                <p>Moncler</p>
+                <p>Preço: R$ 633,00</p>
+                <label for="tamanho-produto1">Tamanho:</label>
+                <select id="tamanho-produto1" name="tamanho">
+                    <option value="P">P</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="GG">GG</option>
+                </select>
+                <button onclick="adicionarAoCarrinho('Casaco Vidal Matelassê Bicolor', 633.00, 'img/Moncler.webp', document.getElementById('tamanho-produto1').value)">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="slide">
+                <img src="img/CasacoLã.webp" alt="Produto 1">
+                <h3>Casaco Lã Masculino </h3>
+                <p>Cacharel</p>
+                <p>Preço: R$ 182,70</p>
+                <label for="tamanho-produto1">Tamanho:</label>
+                <select id="tamanho-produto1" name="tamanho">
+                    <option value="P">P</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="GG">GG</option>
+                </select>
+                <button onclick="adicionarAoCarrinho('Casaco Lã Masculino Preto', 182.70, 'img/CasacoLã.webp', document.getElementById('tamanho-produto1').value)">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="slide">
+                <img src="img/Casac8.webp" alt="Produto 1">
+                <h3>Casaco Lã Polar Flare Checked</h3>
+                <p>Perfect Moment</p>
+                <p>Preço: R$ 399,90</p>
+                <label for="tamanho-produto1">Tamanho:</label>
+                <select id="tamanho-produto1" name="tamanho">
+                    <option value="P">P</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="GG">GG</option>
+                </select>
+                <button onclick="adicionarAoCarrinho('Casaco Lã Polar Flare Checked Azul', 399.99, 'img/Casac8.webp', document.getElementById('tamanho-produto1').value)">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="slide">
+                <img src="img/Casacolongo.webp" alt="Produto 1">
+                <h3>Casaco Longo Fulmarus</h3>
+                <p>Moncler</p>
+                <p>Preço: R$ 849,90</p>
+                <label for="tamanho-produto1">Tamanho:</label>
+                <select id="tamanho-produto1" name="tamanho">
+                    <option value="P">P</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="GG">GG</option>
+                </select>
+                <button onclick="adicionarAoCarrinho('Casaco Longo Fulmarus Azul 1', 849.99, 'img/Casacolongo.webp', document.getElementById('tamanho-produto1').value)">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="slide">
+                <img src="img/Gorro.webp" alt="Produto 1">
+                <h3>CurtloGorro Extreme Fleece</h3>
+                <p>Curtlo</p>
+                <p>Preço: R$ 59,90</p>
+                <label for="tamanho-produto1">Tamanho:</label>
+                <select id="tamanho-produto1" name="tamanho">
+                    <option value="P">P</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="GG">GG</option>
+                </select>
+                <button onclick="adicionarAoCarrinho('Gorro Extreme Fleece', 59.99, 'img/Gorro.webp', document.getElementById('tamanho-produto1').value)">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="slide">
+                <img src="img/luva.jpeg" alt="Produto 1">
+                <h3>Luvas Thermofleece Inverno</h3>
+                <p>Curtlo</p>
+                <p>Preço: R$ 69,90</p>
+                <label for="tamanho-produto1">Tamanho:</label>
+                <select id="tamanho-produto1" name="tamanho">
+                    <option value="P">P</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="GG">GG</option>
+                </select>
+                <button onclick="adicionarAoCarrinho('Luvas Thermofleece Inverno', 69.99, 'img/luva.jpeg', document.getElementById('tamanho-produto1').value)">Adicionar ao Carrinho</button>
+            </div>
+            <!-- Adicione mais slides conforme necessário -->
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <!-- Modal do Carrinho -->
+    <div id="modalCarrinho" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModalCarrinho()">&times;</span>
+            <h2>Seu Carrinho</h2>
+            <div id="carrinho-items">
+                <!-- Os itens do carrinho serão exibidos aqui -->
+            </div>
+            <p>Total: R$ <span id="total-carrinho">0.00</span></p>
+            <button onclick="limparCarrinho()">Limpar Carrinho</button>
+            <button onclick="finalizarCompra()">Finalizar Alugel</button> <!-- Botão de finalizar compra -->
+        </div>
+    </div>
+<br>
+<br>
+<div class="image-container7">
+    <img src="1.webp" alt="Imagem 1">
+    <div class="middle-images">
+        <img src="2.webp" alt="Imagem 2">
+        <img src="3.webp" alt="Imagem 3">
+    </div>
+    <img src="4.webp" alt="Imagem 4">
+</div>
+<br>
+<br>
+    <div class="containertxt">
+        <div>
+            <img src="img/REDUZA.png" alt="Descrição da imagem 1">
+            <p><strong>REDUZA</strong></p>
+            <p>37 kgs de roupas são 
+                descartados anualmente pela
+                mulher moderna. Alugue e ajude
+                a reduzir esse número.</p>
+        </div>
+        <div>
+            <img src="img/REUSE.png" alt="Descrição da imagem 2">
+            <p><strong>REUSE</strong></p>
+            <p>Quando o ciclo do aluguel se encerra, 
+                nossas peças vão para projetos sociais.</p>
+        </div>
+        <div>
+            <img src="img/REPENSE.png" alt="Descrição da imagem 3">
+            <p><strong>REPENSE</strong></p>
+            <p>Alugando você incentiva a moda 
+                compartilhada, a economia circular
+                e reduz os impactos ambientais.</p>
+        </div>
+    </div>
+    <br>
+    <!-- Rodape-->
+    <footer>
+        <div class="rodape">
+            <p>&copy; 2024 Hibernum - Todos os direitos reservados.</p>
+            <ul class="redes-sociais">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/(script.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        let slideIndex = 0;
+
+function showSlide(n) {
+    const slides = document.getElementsByClassName("slide");
+    if (n >= slides.length) {slideIndex = 0}
+    if (n < 0) {slideIndex = slides.length - 3}
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (let i = slideIndex; i < slideIndex + 3; i++) {
+        slides[i].style.display = "block";
+    }
+}
+
+function nextSlide() {
+    showSlide(slideIndex += 3);
+}
+
+function prevSlide() {
+    showSlide(slideIndex -= 3);
+}
+
+showSlide(slideIndex);
+    </script>
+</body>
+</html>

@@ -1,0 +1,545 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, header, .carrossel, .carrossel-inner {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-inner-content {
+    max-width: 1300px; /* Corrigindo unidade */
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-input {
+    display: none;
+    width: 200px; 
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.search-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.search-button img {
+    width: 30px; 
+}
+
+/* estilo para quando a barra de pesquisa está visível */
+.show-search {
+    display: inline-block;
+}
+
+
+.navbar{
+    background-color: #f2f2f2;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    box-shadow: 10px 0px 10px #a3ffe7;
+    z-index: 99;
+}
+
+.navbar>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo {
+    color: #00263a;
+    text-decoration: none;
+}
+ nav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+ }
+
+ .nav-icon-container{
+    display: flex;
+    align-items: center;
+ }
+ .nav-icon-container img{
+    width: 30px;
+    cursor: pointer;
+ }
+
+ .nav-icon-container img:first-child{
+    margin-right: 1rem;
+    margin-left: auto;
+ }
+ .nav-icon-container img:nth-child(2){
+    margin-right: 2rem;
+ }
+
+ nav ul li{
+    color: #000;
+    margin-right: 1.5rem;
+    cursor: pointer;
+ }
+
+ nav ul li:hover{
+    transform: translateY(-5px);
+    transition: all 0.2s;
+    font-weight: bold;
+ }
+
+ .menu-button{
+    display: none;
+ }
+
+
+.carrossel {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 0px;
+}
+
+.carrossel-inner {
+    position: relative;
+    overflow: hidden;
+    width: autos;
+}
+
+.carrossel-open:checked + .carrossel-item {
+    position: static;
+    opacity: 1;
+}
+
+.carrossel-item {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+}
+
+.carrossel-item img {
+    display: block;
+    width: 100%;
+    height: 10%;
+    object-fit: cover;
+}
+
+.carrossel-control {
+    background-color: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+   
+}
+
+.carrossel-control.prev {
+    left: 2%;
+}
+
+.carrossel-control.next {
+    right: 2%;
+}
+
+.carrossel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#carrossel-1:checked ~ .control-1,
+#carrossel-2:checked ~ .control-2,
+#carrossel-3:checked ~ .control-3,
+#carrossel-3:checked ~ .control-4 {
+    display: block;
+}
+
+.carrossel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.carrossel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.carrossel-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.carrossel-bullet:hover {
+    color: #aaaaaa;
+}
+
+#carrossel-1:checked ~ .control-1 ~ .carrossel-indicators li:nth-child(1) .carrossel-bullet,
+#carrossel-2:checked ~ .control-2 ~ .carrossel-indicators li:nth-child(2) .carrossel-bullet,
+#carrossel-3:checked ~ .control-3 ~ .carrossel-indicators li:nth-child(3) .carrossel-bullet,
+#carrossel-4:checked ~ .control-4 ~ .carrossel-indicators li:nth-child(4) .carrossel-bullet {
+    color: #428bca;
+}
+
+#title {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+
+.destaques {
+    text-align: center;
+}
+
+.destaques ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.destaques ul li {
+    margin: 0 10px;
+    color: red;
+}
+
+/* Estilo do modal do carrinho */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    right: 0;
+    top: 0;
+    width: 30%; 
+    height: 50%; 
+    overflow: auto; 
+}
+
+/* Estilo do conteúdo do modal */
+.modal-content {
+    background-color: #fefefe; 
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+/* Estilo para o botão de fechar */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    border: 2px solid #aaa; 
+    padding: 5px;
+    border-radius: 5px; 
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    border-color: black; 
+}
+
+/* Estilo para os botões dentro do carrinho */
+button {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+button:hover {
+    background-color: #45a049; /* Altera a cor de fundo ao passar o mouse */
+}
+
+/* Estilo para o botão de limpar carrinho */
+#limpar-carrinho {
+    background-color: #f44336; /* Cor de fundo vermelha */
+}
+
+#limpar-carrinho:hover {
+    background-color: #da190b; /* Altera a cor de fundo ao passar o mouse */
+}
+
+/* Estilo para os itens do carrinho */
+#carrinho-items {
+    margin-bottom: 10px;
+}
+
+/* Estilo para o total do carrinho */
+#total-carrinho {
+    font-weight: bold;
+}
+
+/* Estilos para o botão de fechar */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.slider-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: white;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 calc(33% - 20px); /* Largura reduzida para 30% do contêiner com 20px de espaçamento */
+    margin-right: 20px; /* Espaçamento entre os slides */
+    text-align: center;
+    padding-bottom: 20px; /* Espaçamento entre o conteúdo do slide e o botão */
+    border-bottom: 1px solid #ccc; /* Linha separadora entre os slides */
+}
+
+.slide:last-child {
+    margin-right: 0; /* Remove a margem do último slide */
+}
+
+.slide img {
+    width: 60%;
+    height: auto;
+}
+
+button {
+    background-color: #f2f2f2;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #f2f2f2;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:active {
+    background-color: #3e8e41;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 2;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+
+  /*rodape*/
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.rodape {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.rodape p {
+    margin-bottom: 10px;
+}
+
+.redes-sociais {
+    list-style: none;
+    padding: 0;
+}
+
+.redes-sociais li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.redes-sociais li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.redes-sociais li a:hover {
+    text-decoration: underline;
+}
+
+
+
+.containertxt {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.containertxt > div {
+    text-align: center;
+}
+.containertxt img {
+    width: 100px; /* ajuste conforme necessário */
+    height: auto;
+}
+
+.containertxt p{
+        font-size: 20px; /* Alterando o tamanho da fonte do parágrafo */
+        color: #000000; /* Alterando a cor do texto */
+        margin-top: 10px; /* Adicionando margem superior */
+        white-space: pre-line; /* Preservar quebras de linha */
+  
+}
+
+
+/* Resposividade */
+@media (max-width: 768px) {
+    .navbar > div, .nav ul {
+        flex-direction: column;
+    }
+
+    .nav ul {
+        width: 100%; 
+        padding: 0;
+    }
+
+    .nav ul li {
+        margin: 10px 0; 
+    }
+
+    .header-inner-content {
+        padding: 0 10px; 
+    }
+
+    .search-input, .menu-button {
+        display: block; 
+        width: 100%; 
+    }
+
+    .modal {
+        width: 80%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.5rem;
+    }
+
+    .nav-icon-container img {
+        width: 20px; /
+    }
+
+    .modal {
+        width: 95%; 
+    }
+}
+
+select {
+    padding: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.image-container8 {
+    display: flex;            
+    justify-content: space-around; 
+    align-items: center;   
+}
+
+.image-container8 img {
+    width: 110%;               
+    height: auto;             
+    margin: 0 0.3%;           
+}
+
+
+.image-container7 {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    height: 80vh;
+    padding: 10px; 
+}
+.middle-images {
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px; 
+}
+.image-container7 > img, .middle-images img {
+    width: 500px; 
+    height: auto; 
+    margin: 0 10px; 
+}
+.middle-images img {
+    width: 350px; 
+    height: auto; 
+    margin: auto;
+} 

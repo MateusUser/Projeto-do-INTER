@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div, form {
+    margin-bottom: 10px;
+}
+
+#itensCarrinho div {
+    border-bottom: 1px solid #ccc;
+    padding: 8px 0;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.opcaoPagamento {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+img.product-image {
+    width: 60px; /* Ajuste conforme necessário */
+    height: auto;
+}
+
+.item-control {
+    padding: 5px;
+    margin: 5px;
+}
+
+
+.navbar{
+    background-color: #f2f2f2;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    box-shadow: 10px 0px 10px #a3ffe7;
+    z-index: 99;
+}
+
+.navbar>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo {
+    color: #00263a;
+    text-decoration: none;
+}
+ nav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+ }
+
+ .nav-icon-container{
+    display: flex;
+    align-items: center;
+ }
+ .nav-icon-container img{
+    width: 30px;
+    cursor: pointer;
+ }
+
+ .nav-icon-container img:first-child{
+    margin-right: 1rem;
+    margin-left: auto;
+ }
+ .nav-icon-container img:nth-child(2){
+    margin-right: 2rem;
+ }
+
+ nav ul li{
+    color: #000;
+    margin-right: 1.5rem;
+    cursor: pointer;
+ }
+
+ nav ul li:hover{
+    transform: translateY(-5px);
+    transition: all 0.2s;
+    font-weight: bold;
+ }
+
+ .menu-button{
+    display: none;
+ }
+
+ body, header, .carrossel, .carrossel-inner {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-inner-content{
+    max-width: 1300;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.rodape {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.rodape p {
+    margin-bottom: 10px;
+}
+
+.redes-sociais {
+    list-style: none;
+    padding: 0;
+}
+.redes-sociais li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.redes-sociais li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.redes-sociais li a:hover {
+    text-decoration: underline;
+}
