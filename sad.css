@@ -1,21 +1,21 @@
 .image-container7 {
     display: flex; 
-    justify-content: space-between; /* Distribui espaço entre os itens */
-    align-items: center; /* Centraliza verticalmente */
-    height: 100vh; /* Opcional: Torna o contêiner da altura total da janela */
-    padding: 5px; /* Adiciona espaço em torno das bordas do contêiner */
+    justify-content: space-between; 
+    align-items: center; 
+    height: 100vh; 
+    padding: 5px; 
 }
 .middle-images {
     display: flex; 
-    flex-direction: column; /* Organiza as imagens em coluna */
-    gap: 20px; /* Espaço entre as imagens do meio */
+    flex-direction: column; 
+    gap: 20px; 
 }
 .image-container7 > img, .middle-images img {
-    width: 440px; /* Largura para imagens nas extremidades */
-    height: auto; /* Mantém a proporção das imagens */
-    margin: 0 10px; /* Espaço horizontal entre as imagens e outros elementos */
+    width: 440px; 
+    height: auto; 
+    margin: 0 10px; 
 }
 .middle-images img {
-    width: 300px; /* Largura menor para as imagens do meio */
-    height: auto; /* Mantém a proporção das imagens */
+    width: 300px; 
+    height: auto; 
 }
